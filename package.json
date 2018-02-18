@@ -25,10 +25,12 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
+		"benchmark": "^2.1.4",
 		"tap-min": "^1.2.2",
 		"tape": "^4.8.0"
 	},
 	"scripts": {
+		"benchmark": "env NODE_ENV=production node benchmark.js",
 		"test": "env NODE_ENV=dev node test.js | tap-min",
 		"prepublishOnly": "npm test"
 	}
