@@ -1,0 +1,35 @@
+{
+	"name": "sort-array-by-another",
+	"description": "Sort an array, then apply the same steps to another array.",
+	"version": "0.1.0",
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"sort",
+		"array",
+		"list",
+		"multiple",
+		"many",
+		"order",
+		"by"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/sort-array-by-another",
+	"repository": "derhuerst/sort-array-by-another",
+	"bugs": "https://github.com/derhuerst/sort-array-by-another/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=6"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"tap-min": "^1.2.2",
+		"tape": "^4.8.0"
+	},
+	"scripts": {
+		"test": "env NODE_ENV=dev node test.js | tap-min",
+		"prepublishOnly": "npm test"
+	}
+}
