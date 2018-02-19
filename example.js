@@ -2,13 +2,10 @@
 
 const recordSort = require('.')
 
-const o1 = {first: true}
-const o2 = {second: true}
-const o3 = {third: true}
-const items = [o2, o1, o3]
-const model = [2, 1, 3]
+const names = ['boris', 'ada', 'charles']
+const student = [false, true, true]
+const ages = [20, 10, 30]
 
-const applySort = recordSort(model)
-const sortedItems = applySort(items)
-
-console.log(sortedItems)
+const applySort = recordSort(ages)
+console.log(applySort(names))
+console.log(applySort(student))

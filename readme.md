@@ -18,23 +18,27 @@ npm install sort-array-by-another
 
 ## Usage
 
-Let's assume you have two arrays: `items` contains items you can't sort by comparing, but `model` contains the indexes the items in `items` are supposed to have:
+Let's assume we have arrays of properties:
 
 ```js
-const o1 = {}; const o2 = {}; const o3 = {}
-const items = [o2, o1, o3]
-const model = [2, 1, 3]
+const names = ['boris', 'ada', 'charles']
+const student = [false, true, true]
+const ages = [20, 10, 30]
 ```
 
-Using `sortArrayByAnother`, you can sort `items` the same way that [`Array.prototype.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) will sort `model`:
+For performance reasons, we won't use an array of objects, but use `sort-array-by-another` instead:
 
 ```js
 const recordSort = require('sort-array-by-another')
 
-const applySort = recordSort(model)
-applySort(items)
-// [o1, o2, o3]
+const applySort = recordSort(ages)
+applySort(student)
+// [true, false, true]
+applySort(names)
+// ['ada', 'boris', 'charles']
 ```
+
+Using `sortArrayByAnother`, you can sort `items` the same way that [`Array.prototype.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) will sort `model`:
 
 
 ## Contributing
