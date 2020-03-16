@@ -10,8 +10,7 @@ const record = (model) => {
 	map = map.sort(byVal)
 	for (let i = 0; i < l; i++) map[i] = map[i][0]
 
-	const apply = (arr) => {
-		const newArr = []
+	const apply = (arr, newArr = new Array(l)) => {
 		for (let i = 0; i < l; i++) newArr[i] = arr[map[i]]
 		return newArr
 	}

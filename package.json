@@ -1,7 +1,7 @@
 {
 	"name": "sort-array-by-another",
 	"description": "Sort an array, then apply the same steps to another array.",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"main": "index.js",
 	"files": [
 		"index.js"
@@ -21,12 +21,12 @@
 	"bugs": "https://github.com/derhuerst/sort-array-by-another/issues",
 	"license": "ISC",
 	"engines": {
-		"node": ">=6"
+		"node": ">=10"
 	},
 	"dependencies": {},
 	"devDependencies": {
 		"benchmark": "^2.1.4",
-		"tap-min": "^1.2.2",
+		"tap-min": "^2.0.0",
 		"tape": "^4.8.0"
 	},
 	"scripts": {
