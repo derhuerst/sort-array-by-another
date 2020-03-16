@@ -16,20 +16,24 @@ for (let i = 0; i < 10000; i++) {
 	hugeArr3.push(v.toString(36)[0])
 }
 
+const applyHugeModel = record(hugeModel)
+
 new Suite()
 
-.add('5 items, applying 3x', function () {
+.add('5 items, recording & applying 3x', () => {
 	const apply = record([3, 1, 4, 2, 5])
 	apply(['c', 'a', 'd', '2', '5'])
 	apply(['3', '1', '4', '2', '5'])
 	apply([3, 1, 4, 2, 5])
 })
 
-.add('10000 items, applying 3x', function () {
-	const apply = record(hugeModel)
-	apply(hugeArr1)
-	apply(hugeArr2)
-	apply(hugeArr3)
+.add('recording with 10000 items', () => {
+	record(hugeModel)
+})
+.add('applying with 10000 items', () => {
+	applyHugeModel(hugeArr1)
+	applyHugeModel(hugeArr2)
+	applyHugeModel(hugeArr3)
 })
 
 .on('error', (err) => {
