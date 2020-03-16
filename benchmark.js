@@ -4,18 +4,13 @@ const {Suite} = require('benchmark')
 
 const record = require('.')
 
-const hugeModel = new Array(10000)
-const hugeArr1 = new Array(10000)
-const hugeArr2 = new Array(10000)
-const hugeArr3 = new Array(10000)
-for (let i = 0; i < 10000; i++) {
+const hugeModel = new Array(100 * 1000)
+const hugeData = new Array(100 * 1000)
+for (let i = 0; i < 100 * 1000; i++) {
 	const v = Math.round(Math.random() * 100)
 	hugeModel.push(v)
-	hugeArr1.push(v)
-	hugeArr2.push(v + '')
-	hugeArr3.push(v.toString(36)[0])
+	hugeData.push(v)
 }
-
 const applyHugeModel = record(hugeModel)
 
 new Suite()
@@ -27,13 +22,11 @@ new Suite()
 	apply([3, 1, 4, 2, 5])
 })
 
-.add('recording with 10000 items', () => {
+.add('recording with 100000 items', () => {
 	record(hugeModel)
 })
-.add('applying with 10000 items', () => {
-	applyHugeModel(hugeArr1)
-	applyHugeModel(hugeArr2)
-	applyHugeModel(hugeArr3)
+.add('applying with 100000 items', () => {
+	applyHugeModel(hugeData)
 })
 
 .on('error', (err) => {

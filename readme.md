@@ -41,6 +41,11 @@ applySort(names)
 Using `sortArrayByAnother`, you can sort `items` the same way that [`Array.prototype.sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) will sort `model`:
 
 
+## Related
+
+- [`array-rearrange`](https://github.com/dfcreative/array-rearrange) – Rearrange array elements by index.
+
+
 ## Contributing
 
 If you have a question or have difficulties using `sort-arrays-by-another, please double-check your code and setup first. If you think you have found a bug or want to propose a feature, refer to [the issues page](https://github.com/derhuerst/sort-array-by-another/issues).
