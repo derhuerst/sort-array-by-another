@@ -27,3 +27,11 @@ test('applies to unsortable arrays', (t) => {
 	const newArr = apply([o3, o1, o4, o2])
 	t.deepEqual(newArr, [o1, o2, o3, o4])
 })
+
+test('uses a custom sort fn', (t) => {
+	t.plan(1)
+
+	const apply = record([[3], [1], [4], [2]], (a, b) => a[0] - b[0])
+	const newArr = apply(['baz', 'foo', 'qux', 'bar'])
+	t.deepEqual(newArr, ['foo', 'bar', 'baz', 'qux'])
+})
