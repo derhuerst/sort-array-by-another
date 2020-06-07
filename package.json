@@ -1,7 +1,7 @@
 {
 	"name": "sort-array-by-another",
 	"description": "Sort an array, then apply the same steps to another array.",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"main": "index.js",
 	"files": [
 		"index.js"
@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"benchmark": "^2.1.4",
 		"tap-min": "^2.0.0",
-		"tape": "^4.8.0"
+		"tape": "^5.0.1"
 	},
 	"scripts": {
 		"benchmark": "env NODE_ENV=production node benchmark.js",
